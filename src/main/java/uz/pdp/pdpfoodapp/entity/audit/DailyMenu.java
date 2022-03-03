@@ -24,5 +24,4 @@ public class DailyMenu extends Auditable {
     private String name;
 
 
-
 }

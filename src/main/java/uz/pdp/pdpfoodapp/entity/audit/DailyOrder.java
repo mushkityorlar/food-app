@@ -5,7 +5,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import uz.pdp.pdpfoodapp.entity.Auditable;
-import uz.pdp.pdpfoodapp.entity.auth.AuthUser;
+import uz.pdp.pdpfoodapp.entity.auth.User;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
@@ -23,7 +23,7 @@ import java.time.LocalDateTime;
 public class DailyOrder extends Auditable {
 
     @OneToOne
-    private AuthUser user;
+    private User user;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "meal_id", referencedColumnName = "id")

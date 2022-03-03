@@ -1,4 +1,4 @@
-package uz.pdp.pdpfoodapp.exceptions;
+package uz.pdp.pdpfoodapp.eror;
 
 
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -30,6 +30,7 @@ public class AppError {
         this.developerMessage = developerMessage;
         this.path = ((ServletWebRequest) webRequest).getRequest().getRequestURI();
     }
+
 
     public AppError(String message, WebRequest webRequest, HttpStatus httpStatus) {
         this(message, message, webRequest, httpStatus);

@@ -5,9 +5,11 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import uz.pdp.pdpfoodapp.entity.Auditable;
+import uz.pdp.pdpfoodapp.entity.audit.Department;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
+import javax.persistence.*;
+import java.util.Collection;
+import java.util.Collections;
 
 /**
  * @author : Oyatjon  -> @data :3/2/2022 12:07
@@ -17,7 +19,8 @@ import javax.persistence.Entity;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class AuthUser extends Auditable {
+@Table(name = "auth_user")
+public class User extends Auditable {
     @Column(unique = true)
     private String username;
 
@@ -25,17 +28,21 @@ public class AuthUser extends Auditable {
 
     private String fullName;
 
+    @Column(unique = true)
     private String phoneNumber;
 
-    private String role;
+    @ManyToMany(fetch = FetchType.EAGER)
+    private Collection<Role> roles = Collections.emptyList();
 
     private String language;
 
     private String chatId;
 
-    private Long departmentId;
+    @OneToOne
+    private Department department;
 
     private boolean active;
 
     private boolean blocked;
+
 }

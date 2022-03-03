@@ -5,7 +5,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import uz.pdp.pdpfoodapp.entity.Auditable;
-import uz.pdp.pdpfoodapp.entity.auth.AuthUser;
+import uz.pdp.pdpfoodapp.entity.auth.User;
 
 import javax.persistence.Entity;
 import javax.persistence.OneToOne;
@@ -13,7 +13,6 @@ import javax.persistence.OneToOne;
 /**
  * @author : Oyatjon  -> @data :3/2/2022 12:08
  */
-
 
 
 @Getter
@@ -24,7 +23,7 @@ import javax.persistence.OneToOne;
 public class Complain extends Auditable {
 
     @OneToOne()
-    private AuthUser user;
+    private User user;
 
     private String message;
 
