@@ -1,10 +1,10 @@
-package uz.husanov.pdpfoodapp.entity.auth;
+package uz.pdp.pdpfoodapp.entity.auth;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import uz.husanov.pdpfoodapp.entity.Auditable;
+import uz.pdp.pdpfoodapp.entity.Auditable;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

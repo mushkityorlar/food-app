@@ -1,11 +1,11 @@
-package uz.husanov.pdpfoodapp.entity.audit;
+package uz.pdp.pdpfoodapp.entity.audit;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import uz.husanov.pdpfoodapp.entity.Auditable;
-import uz.husanov.pdpfoodapp.entity.auth.AuthUser;
+import uz.pdp.pdpfoodapp.entity.Auditable;
+import uz.pdp.pdpfoodapp.entity.auth.AuthUser;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;

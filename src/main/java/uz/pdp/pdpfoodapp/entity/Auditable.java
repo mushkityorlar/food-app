@@ -1,4 +1,4 @@
-package uz.husanov.pdpfoodapp.entity;
+package uz.pdp.pdpfoodapp.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
