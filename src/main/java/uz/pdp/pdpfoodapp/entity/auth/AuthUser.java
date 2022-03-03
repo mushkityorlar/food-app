@@ -18,25 +18,24 @@ import javax.persistence.Entity;
 @NoArgsConstructor
 @Entity
 public class AuthUser extends Auditable {
-    //    @Column(unique = true)
-//    private String username;
-//    @Column(nullable = false)
-//    private String password;
-//    private String position;
-//    @Column(name = "active")
-//    private boolean active;
-//    private String fullName;
-//    private String chatId;
-//    private String role;
+    @Column(unique = true)
     private String username;
+
     private String password;
+
     private String fullName;
+
     private String phoneNumber;
+
     private String role;
+
     private String language;
+
     private String chatId;
+
     private Long departmentId;
+
     private boolean active;
+
     private boolean blocked;
-    private boolean deleted;
 }

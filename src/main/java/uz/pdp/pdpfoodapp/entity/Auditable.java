@@ -25,16 +25,20 @@ public abstract class Auditable implements BaseEntity {
     private Long id;
 
     @Convert(disableConversion = true)
-    @Column(name = "createdat")
-    private LocalDateTime createdat;
+    @Column(name = "created_at")
+    private LocalDateTime createdAt;
 
-    @Column(name = "createby")
-    private Long createby;
+    @Column(name = "create_by")
+    private Long createBy;
 
     @Convert(disableConversion = true)
-    @Column(name = "updatedat")
-    private LocalDateTime updatedat;
+    @Column(name = "updated_at")
+    private LocalDateTime updatedAt;
 
-    @Column(name = "updateby")
-    private Long updateby;
+    @Column(name = "update_by")
+    private Long updateBy;
+
+    @Column
+    private boolean deleted;
+
 }
